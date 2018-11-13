@@ -16,6 +16,17 @@ public class Main {
         String[] v8 = {" _ ", "|_|", "|_|",};
         String[] v9 = {" _ ", "|_|", " _|",};
 
+        String testValue = "    _  _     _  _  _  _  _\n" +
+                           "  | _| _||_||_ |_   ||_||_|\n" +
+                           "  ||_  _|  | _||_|  ||_| _|";
+
+        String S = " _  _  _  _  _  _  _  _  _\n" +
+                   "|_||_||_||_||_||_||_||_||_|\n" +
+                   "|_||_||_||_||_||_||_||_||_|";
+
+        digit.convertInputToArrays(testValue);
+        digit.convertInputToArrays(S);
+        /*
         System.out.println(digit.convert(v0));
         System.out.println(digit.convert(v1));
         System.out.println(digit.convert(v2));
@@ -26,5 +37,6 @@ public class Main {
         System.out.println(digit.convert(v7));
         System.out.println(digit.convert(v8));
         System.out.println(digit.convert(v9));
+        */
     }
 }

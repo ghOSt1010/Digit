@@ -1,5 +1,14 @@
 package com.company;
 
+
+/*
+*
+*  First user story to be solved
+*
+*
+*
+*/
+
 class Digit {
 
     private String w0 = " _ ";
@@ -10,9 +19,31 @@ class Digit {
     private String w5 = " _|";
     private String w6 = "|_ ";
 
+   public void convertInputToArrays(String Input){
+      //String[][] Result = null;
+      char[] ch = Input.toCharArray();
+      int StartNumber = 0;
 
+      //0-25 <- first line
+      //26-53 <- second line
+      //54-81 < third line
+      for(int i = 0; i < 4; i++){
+         System.out.print(ch[i]);
+      }
+      //System.out.print("\n");
+      for(int i = 26; i < 30; i++){
+         System.out.print(ch[i]);
+      }
+      //System.out.print("\n");
+      for(int i = 54; i < 58; i++){
+         System.out.print(ch[i]);
+      }
+      System.out.print("\n");
+      System.out.print("\n");
 
-    String convert(String[] digit) {
+   }
+
+   public String convert(String[] digit) {
         if (digit.length != 3) {
             return "?";
         }
@@ -47,6 +78,7 @@ class Digit {
         }
         return "?";
     }
+
 }
 
 
