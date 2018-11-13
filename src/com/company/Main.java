@@ -25,7 +25,7 @@ public class Main {
                    "|_||_||_||_||_||_||_||_||_|";
 
         digit.convertInputToArrays(testValue);
-        digit.convertInputToArrays(S);
+        //digit.convertInputToArrays(S);
         /*
         System.out.println(digit.convert(v0));
         System.out.println(digit.convert(v1));
