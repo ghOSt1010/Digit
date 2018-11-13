@@ -24,6 +24,7 @@ public class Main {
                    "|_||_||_||_||_||_||_||_||_|\n" +
                    "|_||_||_||_||_||_||_||_||_|";
 
+
         digit.convertInputToArrays(testValue);
         //digit.convertInputToArrays(S);
         /*

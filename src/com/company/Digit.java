@@ -24,9 +24,9 @@ class Digit {
       //String[][] Result = null;
       char[] ch = Input.toCharArray();
       int StartNumber = 0;
-      //0-25 <- first line
-      //26-53 <- second line
-      //54-81 < third line
+      //0-25 <- first line : length 27
+      //28-56 <- second line : length 28 ?!
+      //57-82 < third line : length 27
       int CurrentDigitPosLine0 = 0;
       int CurrentDigitPosLine1 = 26;
       int CurrentDigitPosLine2 = 54;
@@ -39,17 +39,20 @@ class Digit {
 
          for(int i = CurrentDigitPosLine1; i < CurrentDigitPosLine1+4; i++){
             if(i<53) System.out.print(ch[i]);
+
          }
 
          for(int i = CurrentDigitPosLine2; i < CurrentDigitPosLine2+4; i++){
             if(i<81) System.out.print(ch[i]);
          }
+         System.out.println("\n");
          CurrentDigitPosLine0+=3;
          CurrentDigitPosLine1+=3;
          CurrentDigitPosLine2+=3;
          //System.out.print("\n");
          System.out.println("============");
       }
+
 
    }
 
