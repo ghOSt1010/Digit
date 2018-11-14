@@ -47,7 +47,7 @@ class Digit {
          Output = {Lines[0].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]),
                    Lines[1].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]),
                    Lines[2].substring(Start_ID[Digit_Place], Start_ID[Digit_Place])};
-         int Number_Result = this.convert(Output);
+         String Number_Result = this.convert(Output);
          System.out.print(Number_Result);
       }
       //lines output testing
