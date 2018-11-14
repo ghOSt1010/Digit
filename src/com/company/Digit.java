@@ -21,9 +21,18 @@ class Digit {
     private String w5 = " _|";
     private String w6 = "|_ ";
 
+
    //Convert input to account number as char array
    public char[] convertStringToAccountNumberCharArray(String Input){
       char[] Result = this.convertStringToAccountNumber(Input).toCharArray();
+      return Result;
+   }
+
+   //Convert input to account number as int array
+   public int convertStringToAccountNumberInt(String Input){
+      int Result;
+      String AccountNumber= this.convertStringToAccountNumber(Input);
+      Result = Integer.parseInt(AccountNumber);
       return Result;
    }
 
@@ -44,7 +53,7 @@ class Digit {
 
       StringBuilder _Input = new StringBuilder(Input);
       char emptychar = ' ';
-      
+
       //removing problematic \n char <- no new line in char array
       _Input.setCharAt(26,emptychar);
       _Input.setCharAt(54,emptychar);
