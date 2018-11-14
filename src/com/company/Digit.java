@@ -19,41 +19,31 @@ class Digit {
     private String w5 = " _|";
     private String w6 = "|_ ";
 
-    //FIXME
+   //FIXED : 14/11/2018 : 12:07 : RC
+   //TODO : get output to 2D table
    public void convertInputToArrays(String Input){
-      //String[][] Result = null;
       char[] ch = Input.toCharArray();
-      int StartNumber = 0;
-      //0-25 <- first line : length 27
-      //28-56 <- second line : length 28 ?!
-      //57-82 < third line : length 27
-      int CurrentDigitPosLine0 = 0;
-      int CurrentDigitPosLine1 = 26;
-      int CurrentDigitPosLine2 = 54;
-
-      for(int move = 0; move < 9; move++){
-
-         for(int i = CurrentDigitPosLine0; i < CurrentDigitPosLine0+4; i++){
-            if(i<27) System.out.print(ch[i]);
-         }
-
-         for(int i = CurrentDigitPosLine1; i < CurrentDigitPosLine1+4; i++){
-            if(i<53) System.out.print(ch[i]);
-
-         }
-
-         for(int i = CurrentDigitPosLine2; i < CurrentDigitPosLine2+4; i++){
-            if(i<81) System.out.print(ch[i]);
-         }
-         System.out.println("\n");
-         CurrentDigitPosLine0+=3;
-         CurrentDigitPosLine1+=3;
-         CurrentDigitPosLine2+=3;
-         //System.out.print("\n");
-         System.out.println("============");
+      String line0; line0 = Input.substring( 0,  27);  //0-27 <- first line
+      String line1; line1 = Input.substring( 27,  55); //27-55 <- second line
+      String line2; line2 = Input.substring( 55,  82); //55-82 < third line
+      String[] Lines = {line0,line1,line2}; 
+      // i = Number of line
+      for(int i = 0; i < 3; i++){
+          System.out.println(Lines[i].substring(3,6));
+          //<- 0 + 3 due to array
+          /* Explanation
+           * i=0 [0,1,2] 
+           * i=1 [0,1,2]
+           * i=2 [0,1,2]
+          */         
       }
-
-
+      //possible solution!
+      String[][] Output = {Lines[0].substring(0,3),Lines[1].substring(0,3),Lines[2].substring(0,3)};
+      
+      //lines output testing
+      //System.out.print(line0);
+      //System.out.print(line1);
+      //System.out.print(line2);
    }
 
    public String convert(String[] digit) {
