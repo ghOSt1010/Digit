@@ -25,7 +25,7 @@ public class Main {
                    "|_||_||_||_||_||_||_||_||_|";
 
 
-        digit.convertInputToArrays(testValue,4);
+        System.out.println(digit.convertStringToAccountNumber(testValue));
         //digit.convertInputToArrays(S);
         /*
         System.out.println(digit.convert(v0));

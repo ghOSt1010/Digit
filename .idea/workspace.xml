@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e068eec4-c0aa-42d0-bca4-1401b930b577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Digit/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Digit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Digit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
@@ -76,14 +76,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2933" />
-          <entry key="txt" value="74" />
+          <entry key="java" value="3475" />
+          <entry key="txt" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2933" />
-          <entry key="PLAIN_TEXT" value="74" />
+          <entry key="JAVA" value="3475" />
+          <entry key="PLAIN_TEXT" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -111,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="344">
+              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -120,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="151">
+              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -299,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542149481201</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&#10;-- convert string input to digit number">
+      <created>1542231173275</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542231173275</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -349,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new algorithm of parse digit" />
     <MESSAGE value="&#10;-- can extract one digit from input string&#10;new algorithm of parse digit" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;-- can extract one digit from input string&#10;new algorithm of parse digit" />
+    <MESSAGE value="&#10;-- convert string input to digit number" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;-- convert string input to digit number" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -365,15 +373,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="344">
+          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="151">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
         </state>
       </provider>
     </entry>
