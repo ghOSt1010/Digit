@@ -19,19 +19,21 @@ class Digit {
     private String w5 = " _|";
     private String w6 = "|_ ";
 
-   //FIXED : 14/11/2018 : 12:07 : RC
-   //TODO : get output to 2D table
+   //FIXME - if needed
+   //TODO : get output to 2D table => to be tested
    public void convertInputToArrays(String Input){
       //error handle digits are 0-9
       int[] Start_IDs = {0,3,6,9,12,15,18,21,24};
       
-       char[] ch = Input.toCharArray();
+      char[] ch = Input.toCharArray();
       String line0 = Input.substring( 0,  27 );  //0-27 <- first line
       String line1 = Input.substring( 27,  55 ); //27-55 <- second line
       String line2 = Input.substring( 55,  82 ); //55-82 < third line
       String[] Lines = {line0,line1,line2}; 
       
       // i = Number of line
+      //example
+      /*
       for(int i = 0; i < 3; i++){
           System.out.println(Lines[i].substring(3,6));
           //<- 0 + 3 due to array
@@ -40,16 +42,19 @@ class Digit {
            * i=1 [0,1,2]
            * i=2 [0,1,2]
           */         
-      }
+      //}
+    
       //possible solution!
       String[][] Output;
-      for(int i = 0; i < 10; i++){ 
-         Output = {Lines[0].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]),
-                   Lines[1].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]),
-                   Lines[2].substring(Start_ID[Digit_Place], Start_ID[Digit_Place])};
-         String Number_Result = this.convert(Output);
-         System.out.print(Number_Result);
+      for(int Digit_Place = 0; Digit_Place < Start_ID.lenght; Digit_Place++){ 
+          for(int i = 0; i < 3; i++){ 
+             Output = {Lines[0].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3),
+                       Lines[1].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3),
+                       Lines[2].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3)};
+             String Number_Result += this.convert(Output);
+          }
       }
+      System.out.print(Number_Result);
       //lines output testing
       //System.out.print(line0);
       //System.out.print(line1);
