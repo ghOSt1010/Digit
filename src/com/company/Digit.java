@@ -4,12 +4,10 @@ package com.company;
 /*
 *
 *  First user story to be solved
-*
+ *  User Story 1 - Solved :)
 *
 *
 */
-
-import sun.text.resources.in.FormatData_in;
 
 class Digit {
 
