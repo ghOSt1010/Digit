@@ -9,6 +9,8 @@ package com.company;
 *
 */
 
+import sun.text.resources.in.FormatData_in;
+
 class Digit {
 
     private String w0 = " _ ";
@@ -21,44 +23,25 @@ class Digit {
 
    //FIXME - if needed
    //TODO : get output to 2D table => to be tested
-   public void convertInputToArrays(String Input){
+   public void convertInputToArrays(String Input, int Digit_Place){
       //error handle digits are 0-9
       int[] Start_IDs = {0,3,6,9,12,15,18,21,24};
-      
-      char[] ch = Input.toCharArray();
-      String line0 = Input.substring( 0,  27 );  //0-27 <- first line
-      String line1 = Input.substring( 27,  55 ); //27-55 <- second line
-      String line2 = Input.substring( 55,  82 ); //55-82 < third line
+
+      StringBuilder _Input = new StringBuilder(Input);
+      char emptychar = ' ';
+      _Input.setCharAt(26,emptychar);
+      _Input.setCharAt(54,emptychar);
+      char[] ch = _Input.toString().toCharArray();
+
+      String line0 = _Input.toString().substring( 0,  27 );  //0-27 <- first line -1 as \n
+      String line1 = _Input.toString().substring( 27,  54 ); //27-55 <- second line -1 as \n
+      String line2 = _Input.toString().substring( 55,  82 ); //55-82 < third line
       String[] Lines = {line0,line1,line2}; 
-      
-      // i = Number of line
-      //example
-      /*
-      for(int i = 0; i < 3; i++){
-          System.out.println(Lines[i].substring(3,6));
-          //<- 0 + 3 due to array
-          /* Explanation
-           * i=0 [0,1,2] 
-           * i=1 [0,1,2]
-           * i=2 [0,1,2]
-          */         
-      //}
-    
-      //possible solution!
-      String[][] Output;
-      for(int Digit_Place = 0; Digit_Place < Start_ID.lenght; Digit_Place++){ 
-          for(int i = 0; i < 3; i++){ 
-             Output = {Lines[0].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3),
-                       Lines[1].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3),
-                       Lines[2].substring(Start_ID[Digit_Place], Start_ID[Digit_Place]+3)};
-             String Number_Result += this.convert(Output);
-          }
-      }
-      System.out.print(Number_Result);
-      //lines output testing
-      //System.out.print(line0);
-      //System.out.print(line1);
-      //System.out.print(line2);
+
+      String[] Output = {Lines[0].substring(Start_IDs[Digit_Place],Start_IDs[Digit_Place]+3),
+                         Lines[1].substring(Start_IDs[Digit_Place],Start_IDs[Digit_Place]+3),
+                         Lines[2].substring(Start_IDs[Digit_Place],Start_IDs[Digit_Place]+3)};
+      System.out.println(this.convert(Output));
    }
 
    public String convert(String[] digit) {
