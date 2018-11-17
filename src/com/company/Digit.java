@@ -1,7 +1,11 @@
 package com.company;
 
 
+import java.util.ArrayList;
+
 class Digit {
+
+   public ArrayList<String> PossibleAmbiguousSolutions = new ArrayList<>(0);
 
    private String w0 = " _ ";
    private String w1 = "   ";
@@ -100,25 +104,54 @@ class Digit {
    }
 
    //Convert input to number by id. ID range 0-8
-   public String solveAmbiguous(String[] Input, int Digit_Place) {
+   public void solveAmbiguous(String[] Input, int Digit_Place) {
       //version 0.0.1 beta :)
       String Result;
-      char[] temp;
       String tempString;
+      String ResetLine0 = Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+      String ResetLine1 = Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+      String ResetLine2 = Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+
       String[] Output = {Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
          Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
          Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
+      char[] temp;
 
-      //for(int i = 0; i < Output.length; i++){
-      temp = Output[1].toCharArray();
-      temp[0] = '|';
-      Output[1] = String.valueOf(temp);
+      //below working!
+      //temp = Output[1].toCharArray();
+      //temp[0] = '|';
+      //Output[1] = String.valueOf(temp);
+      //Output[1].replace(' ', '|');
 
-      Output[1].replace(' ', '|');
-      //}
+      //testing strokes _
+      temp = Output[0].toCharArray();
+      for (int i = 0; i < Output.length; i++) {
+         temp = Output[i].toCharArray();
+         if (temp[1] == ' ') {
+            temp[1] = '_';
+         }
+         Output[i] = String.valueOf(temp);
+         for (int j = 0; j < 3; j++) {
+            System.out.println(Output[j]);
+         }
+         Result = this.convert(Output);
+         if (!Result.contains("?")) {
+            this.PossibleAmbiguousSolutions.add(this.convert(Output));
+         }
+      }
+      Output = null;
+      String[] SecondOutput = {ResetLine0,
+         ResetLine1,
+         ResetLine2};
+      //testing strokes |
+      temp = Output[0].toCharArray();
+      for (int i = 0; i < Output.length; i++) {
+         
+      }
+
 
       Result = this.convert(Output);
-      return Result;
+      //return Result;
    }
 
 
