@@ -48,17 +48,36 @@ public class AccountReader {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
             //-> move to digit replacer -> check sum again
-
-            result.add(transformedAccount + "ILL");
+            this.accountFixer(transformedAccount);
+            result.add(transformedAccount + " ILL");
          } else if (!CheckAccountSumControl(transformedAccount)) {
             //-> move to digit replacer -> check sum again
-
+            this.accountFixer(transformedAccount);
             result.add(transformedAccount + " ERR");
          } else {
             result.add(transformedAccount);
          }
       }
       return result;
+   }
+
+   //account fixer is checking possible account issues
+   private String accountFixer(String account) {
+      char[] FixedAccount = account.toCharArray();
+      String PossibleAccountNumber;
+
+      for (int i = 0; i < FixedAccount.length; i++) {
+         if (FixedAccount[i] == '?') {
+            for (int n = 0; n == 9; n++) {
+               FixedAccount[i] = (char) n;
+               PossibleAccountNumber = String.valueOf(FixedAccount);
+               if (this.CheckAccountSumControl(PossibleAccountNumber)) {
+                  return account + " => " + PossibleAccountNumber + "AMB";
+               }
+            }
+         }
+      }
+      return account + "AMB";
    }
 
    public boolean CheckErrorAccount(String account) {
