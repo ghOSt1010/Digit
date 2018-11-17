@@ -61,10 +61,10 @@ public class AccountReader {
       return account.contains("?");
    }
 
-   public boolean CheckAccountSumControl(String acount) {
+   public boolean CheckAccountSumControl(String account) {
       int sum = 0;
-      for (int i = 1; i <= acount.length(); i++) {
-         sum += i * Integer.parseInt(acount.substring(i - 1, i));
+      for (int i = 1; i <= account.length(); i++) {
+         sum += i * Integer.parseInt(account.substring(i - 1, i));
       }
       return sum % 11 == 0;
    }
