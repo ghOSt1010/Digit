@@ -131,22 +131,29 @@ class Digit {
             temp[1] = '_';
          }
          Output[i] = String.valueOf(temp);
-         for (int j = 0; j < 3; j++) {
-            System.out.println(Output[j]);
-         }
          Result = this.convert(Output);
          if (!Result.contains("?")) {
             this.PossibleAmbiguousSolutions.add(this.convert(Output));
          }
       }
-      //Output = null;
-      //String[] SecondOutput = {ResetLine0,
-      //   ResetLine1,
-      //   ResetLine2};
+      Output = null;
+      String[] SecondOutput = {ResetLine0,
+         ResetLine1,
+         ResetLine2};
       //testing strokes |
       //temp = Output[0].toCharArray();
-      for (int i = 0; i < Output.length; i++) {
-
+      for (int i = 1; i < SecondOutput.length; i++) {
+         for (int j = 0; j < 2; j += 2) {
+            temp = SecondOutput[i].toCharArray();
+            temp[j] = '|';
+            SecondOutput[i] = String.valueOf(temp);
+            Result = this.convert(SecondOutput);
+            if (!Result.contains("?")) {
+               this.PossibleAmbiguousSolutions.add(this.convert(SecondOutput));
+            } else {
+               SecondOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+            }
+         }
       }
 
 
