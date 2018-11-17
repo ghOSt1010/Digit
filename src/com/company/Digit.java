@@ -107,9 +107,9 @@ class Digit {
 
    //Convert input to number by id. ID range 0-8
    public void solveAmbiguous(String[] Input, int Digit_Place) {
-      //version 0.0.1 beta :)
+
       String Result;
-      String tempString;
+
       String ResetLine0 = Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
       String ResetLine1 = Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
       String ResetLine2 = Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
@@ -118,12 +118,6 @@ class Digit {
                          Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
                          Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
       char[] temp;
-
-      //below working!
-      //temp = Output[1].toCharArray();
-      //temp[0] = '|';
-      //Output[1] = String.valueOf(temp);
-      //Output[1].replace(' ', '|');
 
       //testing strokes _
       temp = Output[0].toCharArray();
@@ -164,11 +158,12 @@ class Digit {
             }
          }
       }
-      //combined solution to be developed / reset after each try!
 
+      //combined solution to be developed / reset after each try!
       String[] ThirdOutput = {ResetLine0,
                               ResetLine1,
                               ResetLine2};
+
       temp = ThirdOutput[0].toCharArray();
       for (int i = 1; i < SecondOutput.length; i++) {
          for (int j = 0; j < 2; j += 2) {
@@ -183,10 +178,12 @@ class Digit {
             }
          }
       }
+
+      //removing duplicates which were found
       Set<String> SetOfgetPossibleAmbiguousSolutions = new HashSet<String>(this.PossibleAmbiguousSolutions);
       this.PossibleAmbiguousSolutions.clear();
       this.PossibleAmbiguousSolutions.addAll(SetOfgetPossibleAmbiguousSolutions);
-      
+
    }
 
 }
