@@ -47,41 +47,14 @@ public class AccountReader {
       for (String[] account : listAccounts) {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
-            //-> move to digit replacer -> check sum again
-            result.add(accountFixer(transformedAccount));
-
-            //result.add(transformedAccount + " ILL");
+            result.add(transformedAccount + " ILL");
          } else if (!CheckAccountSumControl(transformedAccount)) {
-            //-> move to digit replacer -> check sum again
-            result.add(accountFixer(transformedAccount));
-
-            //result.add(transformedAccount + " ERR");
+            result.add(transformedAccount + " ERR");
          } else {
             result.add(transformedAccount);
          }
       }
       return result;
-   }
-
-   //account fixer is checking possible account issues
-   private String accountFixer(String account) {
-      char[] FixedAccount = account.toCharArray();
-      String PossibleAccountNumber;
-
-      if (this.CheckErrorAccount(account)) {
-
-         //-> Send back to extended converter??
-
-         //-> purpose new number
-
-         //->calculate check sum
-
-         //->if correct print output + AMB
-
-         //else leave what it was
-
-      }
-      return account;
    }
 
    public boolean CheckErrorAccount(String account) {
