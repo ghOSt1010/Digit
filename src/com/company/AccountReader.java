@@ -48,15 +48,25 @@ public class AccountReader {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
             //get ? place no for tests
-            String Replaced = new Digit().solveAmbiguous(account, transformedAccount.indexOf('?'));
-            transformedAccount = transformedAccount.replace('?', Replaced.charAt(0));
-            if (CheckErrorAccount(transformedAccount)) {
-               result.add(transformedAccount + " ILL");
-            } else {
-               if (!CheckAccountSumControl(transformedAccount)) {
-                  result.add(transformedAccount + " AMB");
+            Digit digit = new Digit();
+            int id = transformedAccount.indexOf("?");
+            digit.solveAmbiguous(account, transformedAccount.indexOf('?'));
+
+            for (int i = 0; i < digit.PossibleAmbiguousSolutions.size(); i++) {
+               String Replaced = digit.PossibleAmbiguousSolutions.get(i);
+               StringBuilder strBuild = new StringBuilder(transformedAccount);
+               strBuild.setCharAt(id, Replaced.charAt(0));
+               //transformedAccount = transformedAccount.replace('?', Replaced.charAt(0));
+               transformedAccount = String.valueOf(strBuild);
+
+               if (CheckErrorAccount(transformedAccount)) {
+                  result.add(transformedAccount + " ILL");
                } else {
-                  result.add(transformedAccount + " OK");
+                  if (!CheckAccountSumControl(transformedAccount)) {
+                     result.add(transformedAccount + " AMB");
+                  } else {
+                     result.add(transformedAccount + " OK");
+                  }
                }
             }
          } else if (!CheckAccountSumControl(transformedAccount)) {

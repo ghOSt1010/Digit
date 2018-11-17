@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 class Digit {
 
-   public ArrayList<String> PossibleAmbiguousSolutions = new ArrayList<>(0);
+   public ArrayList<String> PossibleAmbiguousSolutions = new ArrayList<>();
 
    private String w0 = " _ ";
    private String w1 = "   ";
@@ -139,20 +139,23 @@ class Digit {
             this.PossibleAmbiguousSolutions.add(this.convert(Output));
          }
       }
-      Output = null;
-      String[] SecondOutput = {ResetLine0,
-         ResetLine1,
-         ResetLine2};
+      //Output = null;
+      //String[] SecondOutput = {ResetLine0,
+      //   ResetLine1,
+      //   ResetLine2};
       //testing strokes |
-      temp = Output[0].toCharArray();
+      //temp = Output[0].toCharArray();
       for (int i = 0; i < Output.length; i++) {
-         
+
       }
 
 
-      Result = this.convert(Output);
+      //Result = this.convert(Output);
       //return Result;
    }
 
+   public ArrayList<String> getPossibleAmbiguousSolutions() {
+      return this.PossibleAmbiguousSolutions;
+   }
 
 }
