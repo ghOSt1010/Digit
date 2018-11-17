@@ -47,8 +47,12 @@ public class AccountReader {
       for (String[] account : listAccounts) {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
+            //-> move to digit replacer -> check sum again
+
             result.add(transformedAccount + "ILL");
          } else if (!CheckAccountSumControl(transformedAccount)) {
+            //-> move to digit replacer -> check sum again
+
             result.add(transformedAccount + " ERR");
          } else {
             result.add(transformedAccount);
@@ -63,9 +67,11 @@ public class AccountReader {
 
    public boolean CheckAccountSumControl(String account) {
       int sum = 0;
+
       for (int i = 1; i <= account.length(); i++) {
          sum += i * Integer.parseInt(account.substring(i - 1, i));
       }
+
       return sum % 11 == 0;
    }
 }
