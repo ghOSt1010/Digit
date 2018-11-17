@@ -50,7 +50,15 @@ public class AccountReader {
             //get ? place no for tests
             String Replaced = new Digit().solveAmbiguous(account, transformedAccount.indexOf('?'));
             transformedAccount = transformedAccount.replace('?', Replaced.charAt(0));
-            result.add(transformedAccount + " ILL");
+            if (CheckErrorAccount(transformedAccount)) {
+               result.add(transformedAccount + " ILL");
+            } else {
+               if (!CheckAccountSumControl(transformedAccount)) {
+                  result.add(transformedAccount + " AMB");
+               } else {
+                  result.add(transformedAccount + " OK");
+               }
+            }
          } else if (!CheckAccountSumControl(transformedAccount)) {
             //get ? place no for tests
 

@@ -101,6 +101,7 @@ class Digit {
 
    //Convert input to number by id. ID range 0-8
    public String solveAmbiguous(String[] Input, int Digit_Place) {
+      //version 0.0.1 beta :)
       String Result;
       char[] temp;
       String tempString;
@@ -117,7 +118,6 @@ class Digit {
       //}
 
       Result = this.convert(Output);
-      System.out.println(Result);
       return Result;
    }
 
