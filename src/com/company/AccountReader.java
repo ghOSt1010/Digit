@@ -48,12 +48,14 @@ public class AccountReader {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
             //-> move to digit replacer -> check sum again
-            this.accountFixer(transformedAccount);
-            result.add(transformedAccount + " ILL");
+            result.add(accountFixer(transformedAccount));
+
+            //result.add(transformedAccount + " ILL");
          } else if (!CheckAccountSumControl(transformedAccount)) {
             //-> move to digit replacer -> check sum again
-            this.accountFixer(transformedAccount);
-            result.add(transformedAccount + " ERR");
+            result.add(accountFixer(transformedAccount));
+
+            //result.add(transformedAccount + " ERR");
          } else {
             result.add(transformedAccount);
          }
@@ -66,18 +68,20 @@ public class AccountReader {
       char[] FixedAccount = account.toCharArray();
       String PossibleAccountNumber;
 
-      for (int i = 0; i < FixedAccount.length; i++) {
-         if (FixedAccount[i] == '?') {
-            for (int n = 0; n == 9; n++) {
-               FixedAccount[i] = (char) n;
-               PossibleAccountNumber = String.valueOf(FixedAccount);
-               if (this.CheckAccountSumControl(PossibleAccountNumber)) {
-                  return account + " => " + PossibleAccountNumber + "AMB";
-               }
-            }
-         }
+      if (this.CheckErrorAccount(account)) {
+
+         //-> Send back to extended converter??
+
+         //-> purpose new number
+
+         //->calculate check sum
+
+         //->if correct print output + AMB
+
+         //else leave what it was
+
       }
-      return account + "AMB";
+      return account;
    }
 
    public boolean CheckErrorAccount(String account) {
