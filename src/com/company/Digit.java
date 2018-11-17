@@ -10,6 +10,7 @@ class Digit {
    private String w4 = "|_|";
    private String w5 = " _|";
    private String w6 = "|_ ";
+   private String w7 = " _|";
 
 
    //Convert input to account number as char array
@@ -112,24 +113,49 @@ class Digit {
 
       // First line stroke - missing logic
       // missing one stroke -
-      if (digit[0].equals(w1) && digit[1].equals(w3) && digit[1].equals(w4)) {
-         return "0";
-      } else {
-         //1
-         //missing one stroke | upper
-         if (digit[0].equals(w1) && digit[1].equals(w2) && digit[2].equals(w1)) {
-            return "1";
+      if (digit[0].equals(w1))
+         if (digit[1].equals(w3)) {
+            return "0";
+         } else {
+            //1
+            //missing one stroke | upper
+            if (digit[1].equals(w2) && digit[2].equals(w1)) {
+               return "1";
+            }
+            //missing one stroke | upper
+            if (digit[1].equals(w1) && digit[2].equals(w1)) {
+               return "1";
+            }
+            //no more missing strokes |
+            if (digit[1].equals(w2) && digit[2].equals(w2)) {
+               return "1";
+            }
+            //2
+            if (digit[1].equals(w5) && digit[2].equals(w6)) {
+               return "2";
+            }
+            //3
+            if (digit[1].equals(w5) && digit[2].equals(w7)) {
+               return "3";
+            }
+            //4
+            if (digit[1].equals(w5) && digit[2].equals(w2)) {
+               return "4";
+            }
+            //5
+            if (digit[1].equals(w6) && digit[2].equals(w7)) {
+               return "5";
+            }
+            //6
+            //7
+            //8
+            //9
+
          }
-         //missing one stroke | upper
-         if (digit[0].equals(w1) && digit[1].equals(w1) && digit[2].equals(w1)) {
-            return "1";
+      if (digit[0].equals(w0)) {
+         if (digit[1].equals(w0) && digit[2].equals(w7)) {
+            return "5";
          }
-         //no more missing strokes |
-         if (digit[0].equals(w1) && digit[1].equals(w2) && digit[2].equals(w2)) {
-            return "1";
-         }
-         //2
-         //
 
       }
 
