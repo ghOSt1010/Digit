@@ -56,7 +56,6 @@ public class AccountReader {
                String Replaced = digit.PossibleAmbiguousSolutions.get(i);
                StringBuilder strBuild = new StringBuilder(transformedAccount);
                strBuild.setCharAt(id, Replaced.charAt(0));
-               //transformedAccount = transformedAccount.replace('?', Replaced.charAt(0));
                transformedAccount = String.valueOf(strBuild);
 
                if (CheckErrorAccount(transformedAccount)) {

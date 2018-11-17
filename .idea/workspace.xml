@@ -4,6 +4,7 @@
     <list default="true" id="e068eec4-c0aa-42d0-bca4-1401b930b577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/AccountReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AccountReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Digit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Digit.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -76,13 +77,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10601" />
+          <entry key="java" value="10720" />
           <entry key="txt" value="332" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10601" />
+          <entry key="JAVA" value="10720" />
           <entry key="PLAIN_TEXT" value="332" />
         </counts>
       </usages-collector>
@@ -93,13 +94,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -125,13 +126,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+            <state relative-caret-position="222">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="method#convertStringToAccountNumberCharArray#0;class#Digit#0" />
                 <element signature="method#convertStringToAccountNumberInt#0;class#Digit#0" />
                 <element signature="method#convertStringToAccountNumber#0;class#Digit#0" />
-                <element signature="method#convertStringToNumber#0;class#Digit#0" />
                 <element signature="method#convert#0;class#Digit#0" />
                 <element signature="e#5249#5250#0" expanded="true" />
                 <element signature="e#5300#5301#0" expanded="true" />
@@ -152,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="59" column="61" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
+            <state relative-caret-position="239">
+              <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#AccountReader#0;class#AccountReader#0" />
@@ -445,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542495212721</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="User Story 4 -&gt; in progress :)&#10;User Story 1,2,3 - solved">
+      <created>1542495967610</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1542495967610</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -455,7 +462,7 @@
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -464,7 +471,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26891893" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26891893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -518,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/AccountNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Inputs/Inputfile.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -532,10 +532,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AccountNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="59" column="61" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
+        <state relative-caret-position="239">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#AccountReader#0;class#AccountReader#0" />
@@ -549,13 +556,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+        <state relative-caret-position="222">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="method#convertStringToAccountNumberCharArray#0;class#Digit#0" />
             <element signature="method#convertStringToAccountNumberInt#0;class#Digit#0" />
             <element signature="method#convertStringToAccountNumber#0;class#Digit#0" />
-            <element signature="method#convertStringToNumber#0;class#Digit#0" />
             <element signature="method#convert#0;class#Digit#0" />
             <element signature="e#5249#5250#0" expanded="true" />
             <element signature="e#5300#5301#0" expanded="true" />

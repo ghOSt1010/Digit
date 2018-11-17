@@ -45,8 +45,8 @@ class Digit {
       String Result;
 
       String[] Output = {Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
-         Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
-         Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
+                         Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
+                         Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
 
       Result = this.convert(Output);
       return Result;
@@ -113,8 +113,8 @@ class Digit {
       String ResetLine2 = Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
 
       String[] Output = {Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
-         Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
-         Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
+                         Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
+                         Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
       char[] temp;
 
       //below working!
@@ -138,10 +138,10 @@ class Digit {
       }
       Output = null;
       String[] SecondOutput = {ResetLine0,
-         ResetLine1,
-         ResetLine2};
+                               ResetLine1,
+                               ResetLine2};
+
       //testing strokes |
-      //temp = Output[0].toCharArray();
       for (int i = 1; i < SecondOutput.length; i++) {
          for (int j = 0; j < 2; j += 2) {
             temp = SecondOutput[i].toCharArray();
@@ -155,10 +155,7 @@ class Digit {
             }
          }
       }
-
-
-      //Result = this.convert(Output);
-      //return Result;
+      //combined solution to be developed / reset after each try!
    }
 
    public ArrayList<String> getPossibleAmbiguousSolutions() {
