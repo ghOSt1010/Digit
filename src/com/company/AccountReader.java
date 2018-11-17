@@ -45,10 +45,10 @@ public class AccountReader {
       List<String> result = new ArrayList<>();
 
       for (String[] account : listAccounts) {
+         Digit digit = new Digit();
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
-            //get ? place no for tests
-            Digit digit = new Digit();
+
             int id = transformedAccount.indexOf("?");
             digit.solveAmbiguous(account, transformedAccount.indexOf('?'));
 

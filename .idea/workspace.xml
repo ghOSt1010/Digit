@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e068eec4-c0aa-42d0-bca4-1401b930b577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/AccountReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AccountReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Digit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Digit.java" afterDir="false" />
     </list>
@@ -77,13 +77,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10720" />
+          <entry key="java" value="11069" />
           <entry key="txt" value="332" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10720" />
+          <entry key="JAVA" value="11069" />
           <entry key="PLAIN_TEXT" value="332" />
         </counts>
       </usages-collector>
@@ -126,15 +126,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+            <state relative-caret-position="286">
+              <caret line="185" column="6" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#convertStringToAccountNumberCharArray#0;class#Digit#0" />
                 <element signature="method#convertStringToAccountNumberInt#0;class#Digit#0" />
                 <element signature="method#convertStringToAccountNumber#0;class#Digit#0" />
                 <element signature="method#convert#0;class#Digit#0" />
-                <element signature="e#5249#5250#0" expanded="true" />
-                <element signature="e#5300#5301#0" expanded="true" />
+                <element signature="e#6240#6241#0" expanded="true" />
+                <element signature="e#6291#6292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+            <state relative-caret-position="246">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#AccountReader#0;class#AccountReader#0" />
@@ -252,7 +253,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542458914449" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542497683435" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -452,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542495967610</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="User Story 4 -&gt; in progress :)&#10;User Story 1,2,3 - solved">
+      <created>1542496123449</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1542496123449</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -462,7 +470,7 @@
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16309012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -471,7 +479,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26891893" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26891893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -508,7 +516,6 @@
     <MESSAGE value="User Story 4 -&gt; in progress :)&#10;User Story 1,2,3 - solved" />
     <option name="LAST_COMMIT_MESSAGE" value="User Story 4 -&gt; in progress :)&#10;User Story 1,2,3 - solved" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -525,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Inputs/Inputfile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/AccountNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -541,8 +541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+        <state relative-caret-position="246">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#AccountReader#0;class#AccountReader#0" />
@@ -554,17 +554,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inputs/Inputfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="286">
+          <caret line="185" column="6" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#convertStringToAccountNumberCharArray#0;class#Digit#0" />
             <element signature="method#convertStringToAccountNumberInt#0;class#Digit#0" />
             <element signature="method#convertStringToAccountNumber#0;class#Digit#0" />
             <element signature="method#convert#0;class#Digit#0" />
-            <element signature="e#5249#5250#0" expanded="true" />
-            <element signature="e#5300#5301#0" expanded="true" />
+            <element signature="e#6240#6241#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
           </folding>
         </state>
       </provider>

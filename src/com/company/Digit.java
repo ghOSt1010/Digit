@@ -2,6 +2,8 @@ package com.company;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 class Digit {
 
@@ -134,32 +136,57 @@ class Digit {
          Result = this.convert(Output);
          if (!Result.contains("?")) {
             this.PossibleAmbiguousSolutions.add(this.convert(Output));
+         }else {
+            Output[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
          }
       }
-      Output = null;
+
       String[] SecondOutput = {ResetLine0,
                                ResetLine1,
                                ResetLine2};
 
       //testing strokes |
-      for (int i = 1; i < SecondOutput.length; i++) {
+      for (int i = 0; i < SecondOutput.length; i++) {
          for (int j = 0; j < 2; j += 2) {
             temp = SecondOutput[i].toCharArray();
-            temp[j] = '|';
-            SecondOutput[i] = String.valueOf(temp);
-            Result = this.convert(SecondOutput);
-            if (!Result.contains("?")) {
-               this.PossibleAmbiguousSolutions.add(this.convert(SecondOutput));
-            } else {
-               SecondOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+            if (temp[1] == ' ') {
+               temp[1] = '_';
+            }
+            if(i>0){
+               temp[j] = '|';
+               SecondOutput[i] = String.valueOf(temp);
+               Result = this.convert(SecondOutput);
+               if (!Result.contains("?")) {
+                  this.PossibleAmbiguousSolutions.add(this.convert(SecondOutput));
+               } else {
+                  SecondOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+               }
             }
          }
       }
       //combined solution to be developed / reset after each try!
-   }
 
-   public ArrayList<String> getPossibleAmbiguousSolutions() {
-      return this.PossibleAmbiguousSolutions;
+      String[] ThirdOutput = {ResetLine0,
+                              ResetLine1,
+                              ResetLine2};
+      temp = ThirdOutput[0].toCharArray();
+      for (int i = 1; i < SecondOutput.length; i++) {
+         for (int j = 0; j < 2; j += 2) {
+            temp = ThirdOutput[i].toCharArray();
+            temp[j] = '|';
+            ThirdOutput[i] = String.valueOf(temp);
+            Result = this.convert(ThirdOutput);
+            if (!Result.contains("?")) {
+               this.PossibleAmbiguousSolutions.add(this.convert(ThirdOutput));
+            } else {
+               ThirdOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+            }
+         }
+      }
+      Set<String> SetOfgetPossibleAmbiguousSolutions = new HashSet<String>(this.PossibleAmbiguousSolutions);
+      this.PossibleAmbiguousSolutions.clear();
+      this.PossibleAmbiguousSolutions.addAll(SetOfgetPossibleAmbiguousSolutions);
+      
    }
 
 }
