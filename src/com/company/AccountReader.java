@@ -47,10 +47,18 @@ public class AccountReader {
       for (String[] account : listAccounts) {
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
          if (CheckErrorAccount(transformedAccount)) {
+            //get ? place no for tests
+            String Replaced = new Digit().solveAmbiguous(account, transformedAccount.indexOf('?'));
+            transformedAccount = transformedAccount.replace('?', Replaced.charAt(0));
             result.add(transformedAccount + " ILL");
          } else if (!CheckAccountSumControl(transformedAccount)) {
+            //get ? place no for tests
+
+
             result.add(transformedAccount + " ERR");
          } else {
+            //get ? place no for tests
+
             result.add(transformedAccount);
          }
       }

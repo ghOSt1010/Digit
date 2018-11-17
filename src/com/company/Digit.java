@@ -53,10 +53,9 @@ class Digit {
       String DigitErr = "?";
       String Result = DigitErr;
 
-      //if (digit.length != 3) {
-      //
-      //   return Result;
-      //}
+      if (digit.length != 3) {
+         return Result;
+      }
 
       if (digit[0].equals(w1)) {
          if (digit[1].equals(w2)) {
@@ -97,70 +96,30 @@ class Digit {
             } else Result = DigitErr;
          }
       }
-      //if (Done) return Result;
-      if (Result == DigitErr) {
-         Result = this.extendedConverter(digit);
-      }
-
       return Result;
    }
 
-   public String extendedConverter(String[] digit) {
-      //only one stroke play
-      if (digit.length != 3) {
-         return "?";
-      }
+   //Convert input to number by id. ID range 0-8
+   public String solveAmbiguous(String[] Input, int Digit_Place) {
+      String Result;
+      char[] temp;
+      String tempString;
+      String[] Output = {Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
+         Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3),
+         Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3)};
 
-      // First line stroke - missing logic
-      // missing one stroke -
-      if (digit[0].equals(w1))
-         if (digit[1].equals(w3)) {
-            return "0";
-         } else {
-            //1
-            //missing one stroke | upper
-            if (digit[1].equals(w2) && digit[2].equals(w1)) {
-               return "1";
-            }
-            //missing one stroke | upper
-            if (digit[1].equals(w1) && digit[2].equals(w1)) {
-               return "1";
-            }
-            //no more missing strokes |
-            if (digit[1].equals(w2) && digit[2].equals(w2)) {
-               return "1";
-            }
-            //2
-            if (digit[1].equals(w5) && digit[2].equals(w6)) {
-               return "2";
-            }
-            //3
-            if (digit[1].equals(w5) && digit[2].equals(w7)) {
-               return "3";
-            }
-            //4
-            if (digit[1].equals(w5) && digit[2].equals(w2)) {
-               return "4";
-            }
-            //5
-            if (digit[1].equals(w6) && digit[2].equals(w7)) {
-               return "5";
-            }
-            //6
-            //7
-            //8
-            //9
+      //for(int i = 0; i < Output.length; i++){
+      temp = Output[1].toCharArray();
+      temp[0] = '|';
+      Output[1] = String.valueOf(temp);
 
-         }
-      if (digit[0].equals(w0)) {
-         if (digit[1].equals(w0) && digit[2].equals(w7)) {
-            return "5";
-         }
+      Output[1].replace(' ', '|');
+      //}
 
-      }
-
-
-      return "?";
+      Result = this.convert(Output);
+      System.out.println(Result);
+      return Result;
    }
+
 
 }
