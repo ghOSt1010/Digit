@@ -107,9 +107,9 @@ class Digit {
 
    //Convert input to number by id. ID range 0-8
    public void solveAmbiguous(String[] Input, int Digit_Place) {
-
+      //version 0.0.1 beta :)
       String Result;
-
+      String tempString;
       String ResetLine0 = Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
       String ResetLine1 = Input[1].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
       String ResetLine2 = Input[2].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
@@ -120,42 +120,32 @@ class Digit {
       char[] temp;
 
       //testing strokes _
-      temp = Output[0].toCharArray();
       for (int i = 0; i < Output.length; i++) {
-         temp = Output[i].toCharArray();
-         if (temp[1] == ' ') {
-            temp[1] = '_';
-         }
-         Output[i] = String.valueOf(temp);
+         Output[i] = Output[i].replace(' ','_');
          Result = this.convert(Output);
          if (!Result.contains("?")) {
             this.PossibleAmbiguousSolutions.add(this.convert(Output));
-         }else {
-            Output[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
          }
+         Output[i] = Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
       }
 
+      //testing strokes |
       String[] SecondOutput = {ResetLine0,
                                ResetLine1,
                                ResetLine2};
 
-      //testing strokes |
-      for (int i = 0; i < SecondOutput.length; i++) {
+      for (int i = 1; i < SecondOutput.length; i++) {
+         temp = SecondOutput[i].toCharArray();
          for (int j = 0; j < 2; j += 2) {
-            temp = SecondOutput[i].toCharArray();
-            if (temp[1] == ' ') {
-               temp[1] = '_';
-            }
-            if(i>0){
+            if(temp[j] == ' '){
                temp[j] = '|';
-               SecondOutput[i] = String.valueOf(temp);
-               Result = this.convert(SecondOutput);
-               if (!Result.contains("?")) {
-                  this.PossibleAmbiguousSolutions.add(this.convert(SecondOutput));
-               } else {
-                  SecondOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
-               }
             }
+            SecondOutput[i] = String.valueOf(temp);
+            Result = this.convert(SecondOutput);
+            if (!Result.contains("?")) {
+               this.PossibleAmbiguousSolutions.add(this.convert(SecondOutput));
+            }
+            SecondOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
          }
       }
 
@@ -164,26 +154,29 @@ class Digit {
                               ResetLine1,
                               ResetLine2};
 
-      temp = ThirdOutput[0].toCharArray();
-      for (int i = 1; i < SecondOutput.length; i++) {
-         for (int j = 0; j < 2; j += 2) {
-            temp = ThirdOutput[i].toCharArray();
-            temp[j] = '|';
-            ThirdOutput[i] = String.valueOf(temp);
-            Result = this.convert(ThirdOutput);
-            if (!Result.contains("?")) {
-               this.PossibleAmbiguousSolutions.add(this.convert(ThirdOutput));
-            } else {
-               ThirdOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
+      for (int i = 0; i < ThirdOutput.length; i++) {
+         temp = ThirdOutput[i].toCharArray();
+         if(temp[1] == ' '){
+            ThirdOutput[i] = ThirdOutput[i].replace(' ','_');
+            for (int j = 0; j < 2; j += 2) {
+               if(temp[j] == ' '){
+                  temp[j] = '|';
+               }
+               ThirdOutput[i] = String.valueOf(temp);
+               Result = this.convert(ThirdOutput);
+               if (!Result.contains("?")) {
+                  this.PossibleAmbiguousSolutions.add(this.convert(ThirdOutput));
+               }
+               ThirdOutput[i] = ThirdOutput[i].replace(' ','_');
             }
+            ThirdOutput[i] = Input[i].substring(Digit_Place * 3, (Digit_Place * 3) + 3);
          }
       }
 
-      //removing duplicates which were found
       Set<String> SetOfgetPossibleAmbiguousSolutions = new HashSet<String>(this.PossibleAmbiguousSolutions);
       this.PossibleAmbiguousSolutions.clear();
       this.PossibleAmbiguousSolutions.addAll(SetOfgetPossibleAmbiguousSolutions);
-
+      
    }
 
 }
