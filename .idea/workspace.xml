@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e068eec4-c0aa-42d0-bca4-1401b930b577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inputs/Inputfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inputs/Inputfile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Digit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Digit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Digit/com/company/Digit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/AccountReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AccountReader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,13 +76,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11373" />
+          <entry key="java" value="11700" />
           <entry key="txt" value="361" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11373" />
+          <entry key="JAVA" value="11700" />
           <entry key="PLAIN_TEXT" value="361" />
         </counts>
       </usages-collector>
@@ -131,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="546">
               <caret line="128" column="80" selection-start-line="128" selection-start-column="80" selection-end-line="128" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -144,15 +144,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="363">
+              <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2604#2605#0" expanded="true" />
-                <element signature="e#2645#2646#0" expanded="true" />
+                <element signature="method#ReadFile#0;class#AccountReader#0" />
+                <element signature="method#IsolateAccounts#0;class#AccountReader#0" />
+                <element signature="e#3277#3278#0" expanded="true" />
+                <element signature="e#3318#3319#0" expanded="true" />
+                <element signature="method#CheckAccountSumControl#0;class#AccountReader#0" />
               </folding>
             </state>
           </provider>
@@ -166,6 +169,14 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ThirdOutput</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Output</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,9 +192,9 @@
         <option value="$PROJECT_DIR$/src/inputs.inputFile.txt" />
         <option value="$PROJECT_DIR$/src/com/company/AccountNumber.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/AccountReader.java" />
         <option value="$PROJECT_DIR$/src/Inputs/Inputfile.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Digit.java" />
+        <option value="$PROJECT_DIR$/src/com/company/AccountReader.java" />
       </list>
     </option>
   </component>
@@ -244,7 +255,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542498535338" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542532277938" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -472,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542498537794</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="All User Stories Solved!">
+      <created>1542531185122</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1542531185122</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -546,18 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
-            <element signature="e#2645#2646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Inputs/Inputfile.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -567,11 +573,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Digit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="546">
           <caret line="128" column="80" selection-start-line="128" selection-start-column="80" selection-end-line="128" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6325#6333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AccountReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ReadFile#0;class#AccountReader#0" />
+            <element signature="method#IsolateAccounts#0;class#AccountReader#0" />
+            <element signature="e#3277#3278#0" expanded="true" />
+            <element signature="e#3318#3319#0" expanded="true" />
+            <element signature="method#CheckAccountSumControl#0;class#AccountReader#0" />
           </folding>
         </state>
       </provider>

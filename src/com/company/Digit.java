@@ -108,6 +108,7 @@ class Digit {
    //Convert input to number by id. ID range 0-8
    public void solveAmbiguous(String[] Input, int Digit_Place) {
       //version 0.0.1 beta :)
+      //REVIEW!
       String Result;
       String tempString;
       String ResetLine0 = Input[0].substring(Digit_Place * 3, (Digit_Place * 3) + 3);

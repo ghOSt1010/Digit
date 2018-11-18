@@ -45,14 +45,18 @@ public class AccountReader {
       List<String> result = new ArrayList<>();
 
       for (String[] account : listAccounts) {
-         Digit digit = new Digit();
+
          String transformedAccount = new Digit().convertStringToAccountNumber(account);
+
+         //ILL case
          if (CheckErrorAccount(transformedAccount)) {
 
+            Digit digit = new Digit();
             int id = transformedAccount.indexOf("?");
             digit.solveAmbiguous(account, transformedAccount.indexOf('?'));
 
             for (int i = 0; i < digit.PossibleAmbiguousSolutions.size(); i++) {
+
                String Replaced = digit.PossibleAmbiguousSolutions.get(i);
                StringBuilder strBuild = new StringBuilder(transformedAccount);
                strBuild.setCharAt(id, Replaced.charAt(0));
@@ -64,12 +68,28 @@ public class AccountReader {
                   if (!CheckAccountSumControl(transformedAccount)) {
                      result.add(transformedAccount + " AMB");
                   } else {
-                     result.add(transformedAccount + " OK");
+                     result.add(transformedAccount);
                   }
                }
             }
          } else if (!CheckAccountSumControl(transformedAccount)) {
-            //get ? place no for tests
+            //get all for test
+            //FIXME
+            Digit digit =new Digit();
+            for(int i =0; i<9; i++){
+               int id = i;
+               digit.solveAmbiguous(account,id);
+               for(int p = 0; p < digit.PossibleAmbiguousSolutions.size(); p++){
+                  String Replaced = digit.PossibleAmbiguousSolutions.get(p);
+                  StringBuilder strBuild = new StringBuilder(transformedAccount);
+                  strBuild.setCharAt(id, Replaced.charAt(0));
+                  transformedAccount = String.valueOf(strBuild);
+                  if(this.CheckAccountSumControl(transformedAccount)){
+                     result.add(transformedAccount + " AMB");
+                  }
+               }
+
+            }
 
 
             result.add(transformedAccount + " ERR");
